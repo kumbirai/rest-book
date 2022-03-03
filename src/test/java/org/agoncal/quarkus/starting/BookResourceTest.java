@@ -11,10 +11,10 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
-public class BookResourceTest
+class BookResourceTest
 {
     @Test
-    public void shouldGetAllBooks()
+    void shouldGetAllBooks()
     {
         given()
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
@@ -26,7 +26,7 @@ public class BookResourceTest
     }
 
     @Test
-    public void shouldCountAllBooks()
+    void shouldCountAllBooks()
     {
         given()
                 .header(HttpHeaders.ACCEPT, MediaType.TEXT_PLAIN)
@@ -38,7 +38,7 @@ public class BookResourceTest
     }
 
     @Test
-    public void shouldGetABook()
+    void shouldGetABook()
     {
         given()
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
